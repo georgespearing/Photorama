@@ -3,6 +3,7 @@
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,6 +52,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="eLG-LA-wIw" id="RJ6-F8-aCp"/>
                                     <outlet property="spinner" destination="bt7-7z-Qyt" id="kqu-qw-JiP"/>
+                                    <segue destination="Vl2-HC-vsM" kind="show" identifier="showPhoto" id="uo1-uI-X4K"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -63,6 +65,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="85.59782608695653"/>
+        </scene>
+        <!--Photo Info View Controller-->
+        <scene sceneID="suT-oE-w7Y">
+            <objects>
+                <viewController id="Vl2-HC-vsM" customClass="PhotoInfoViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SAm-qb-Bws" customClass="Photoinfoview">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-Mi-O2c">
+                                <rect key="frame" x="0.0" y="44" width="414" height="692"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TNS-is-RUJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TVz-Mi-O2c" firstAttribute="leading" secondItem="TNS-is-RUJ" secondAttribute="leading" id="7GS-a5-6Lj"/>
+                            <constraint firstItem="TVz-Mi-O2c" firstAttribute="top" secondItem="TNS-is-RUJ" secondAttribute="top" id="KN1-b6-WnN"/>
+                            <constraint firstItem="TNS-is-RUJ" firstAttribute="trailing" secondItem="TVz-Mi-O2c" secondAttribute="trailing" id="Vmr-XR-lXW"/>
+                            <constraint firstItem="TNS-is-RUJ" firstAttribute="bottom" secondItem="TVz-Mi-O2c" secondAttribute="bottom" id="t0g-1w-TOj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GB3-6V-tDW"/>
+                    <connections>
+                        <outlet property="imageView" destination="TVz-Mi-O2c" id="rbN-hT-d56"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ETy-L4-vDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1710" y="86"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Myx-ZZ-tjC">
