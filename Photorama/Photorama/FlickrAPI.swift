@@ -26,7 +26,7 @@ struct FlickrAPI{
         let baseParams = [
             "method": endPoint.rawValue,
             "format": "json",
-            "nofsoncallback": "1",
+            "nojsoncallback": "1",
             "api_key": apiKey
         ]
         
@@ -46,7 +46,7 @@ struct FlickrAPI{
         return components.url!
     }
     
-    static var interstingPhotosURL: URL{
+    static var interestingPhotosURL: URL{
         return flickrURL(endPoint: .interestingPhotos, parameters: ["extras": "url_z,date_taken"])
     }
     
