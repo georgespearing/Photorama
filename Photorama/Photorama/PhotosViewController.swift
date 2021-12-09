@@ -18,6 +18,7 @@ class PhotosViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Photo Viewer"
+        navigationItem.rightBarButtonItem?.title = ""
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
         
@@ -31,7 +32,10 @@ class PhotosViewController: UITableViewController {
             case let .success(photos):
                 print("Successfully found \(photos.count) photos.")
                 self.photoDataSource.photos = photos
-                print(self.photoDataSource.photos.count)
+//                print(self.photoDataSource.photos.count)
+                
+                self.navigationItem.rightBarButtonItem?.title = "Load Photos"
+                
 //                if let firstPhoto = photos.first {
 //                    self.updateImageView(for: firstPhoto)
 //                }
@@ -206,6 +210,8 @@ class PhotosViewController: UITableViewController {
             }
         }
         tableView.endUpdates()
+        
+        navigationItem.rightBarButtonItem?.title = ""
     }
 
 }
