@@ -33,6 +33,7 @@ class PhotoInfoViewController: UIViewController{
         super.viewWillAppear(animated)
         
         nameField.text = photo.title
+        valueField.text = photo.photoID
 //
 //        // get the item key
 //        let key = photo.photoID

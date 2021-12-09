@@ -78,37 +78,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="133" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-AA-JHX">
-                                <rect key="frame" x="8" y="52" width="398" height="676"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-AA-JHX">
+                                <rect key="frame" x="0.0" y="52" width="414" height="632"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDz-FH-k0Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="129.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="liz-MY-u9U"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdO-RU-VPx">
+                                        <rect key="frame" x="0.0" y="53" width="414" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="KLT-ax-TAl"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-Mi-O2c">
-                                        <rect key="frame" x="0.0" y="262.66666666666674" width="398" height="413.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="106" width="414" height="526"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="TVz-Mi-O2c" firstAttribute="trailing" secondItem="HDz-FH-k0Y" secondAttribute="trailing" id="dJk-lb-XBV"/>
+                                    <constraint firstItem="HDz-FH-k0Y" firstAttribute="top" secondItem="yMZ-AA-JHX" secondAttribute="top" id="dA8-UU-zjt"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TNS-is-RUJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yMZ-AA-JHX" firstAttribute="leading" secondItem="TNS-is-RUJ" secondAttribute="leading" constant="8" id="7vx-ju-OZw"/>
-                            <constraint firstAttribute="bottom" secondItem="yMZ-AA-JHX" secondAttribute="bottom" constant="8" id="IN5-6q-KCV"/>
-                            <constraint firstAttribute="trailing" secondItem="yMZ-AA-JHX" secondAttribute="trailing" constant="8" id="Lye-4h-jU0"/>
-                            <constraint firstItem="yMZ-AA-JHX" firstAttribute="top" secondItem="TNS-is-RUJ" secondAttribute="top" constant="8" id="MKa-YU-PgY"/>
+                            <constraint firstItem="yMZ-AA-JHX" firstAttribute="centerX" secondItem="SAm-qb-Bws" secondAttribute="centerX" id="1VT-zq-GoW"/>
+                            <constraint firstItem="yMZ-AA-JHX" firstAttribute="centerY" secondItem="SAm-qb-Bws" secondAttribute="centerY" id="CoR-wx-7ka"/>
+                            <constraint firstItem="yMZ-AA-JHX" firstAttribute="trailing" secondItem="TNS-is-RUJ" secondAttribute="trailing" id="Klu-cI-Vmc"/>
+                            <constraint firstItem="yMZ-AA-JHX" firstAttribute="top" secondItem="TNS-is-RUJ" secondAttribute="top" constant="8" id="z2L-oW-R7G"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GB3-6V-tDW"/>
                     <connections>
                         <outlet property="imageView" destination="TVz-Mi-O2c" id="rbN-hT-d56"/>
                         <outlet property="nameField" destination="HDz-FH-k0Y" id="cWo-qi-iU9"/>
+                        <outlet property="valueField" destination="tdO-RU-VPx" id="L6h-OQ-mit"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETy-L4-vDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
