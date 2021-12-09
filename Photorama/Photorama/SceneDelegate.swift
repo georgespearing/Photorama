@@ -18,9 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+//        let photoDataSource = PhotoDataSource()
         let rootViewController = window!.rootViewController as! UINavigationController
-        let photosViewController = rootViewController.topViewController as! PhotosViewController
-        photosViewController.store = PhotoStore()
+        let photoController = rootViewController.topViewController as! PhotosViewController
+        photoController.store = PhotoStore()
+//        photoController.photoDataSource = photoDataSource
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

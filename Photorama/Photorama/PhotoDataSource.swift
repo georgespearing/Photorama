@@ -7,19 +7,42 @@
 
 import UIKit
 
-class PhotoDataSource: NSObject, UICollectionViewDataSource{
+class PhotoDataSource: NSObject, UITableViewDataSource{
     
     var photos = [Photo]()
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return photos.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-        let identifier = "PhotoCollectionViewCell"
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! PhotoCollectionViewCell
-        cell.update(displaying: nil)
+//        // create instance of UITableViewCell with default appearance
+//        tableView.register(tableView.self, forCellReuseIdentifier: "Cell")
+        // get a new or recycled cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCollectionViewCell", for: indexPath) as! PhotoCollectionViewCell
+        
+        // set the text on the cell with the description of the item
+        // that is at the nth idex of items, where n = row this cell
+        // will appear in on the table view
+        let item = photos[indexPath.row]
+        
+        // configure the cell with the Item
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+//            dateFormatter.timeStyle = DateFormatter.Style.short
+
+        let strDate = dateFormatter.string(from: item.dateTaken)
+        
+        cell.imageTitle.text=item.title
+        cell.imageDate.text = strDate
+//        cell.valueLabel.text = "\(item.valueInDollars)"
+//        if (item.valueInDollars >= 5){
+//            cell.valueLabel.textColor = UIColor.green
+//        } else{
+//            cell.valueLabel.textColor = UIColor.red
+//        }
         
         return cell
     }

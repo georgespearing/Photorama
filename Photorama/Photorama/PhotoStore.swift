@@ -31,6 +31,7 @@ class PhotoStore{
             let result = self.processPhotosRequest(data: data, error: error)
             OperationQueue.main.addOperation {
                 completion(result)
+                
             }
             
 //            if let jsonData = data{

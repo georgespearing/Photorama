@@ -7,18 +7,20 @@
 
 import UIKit
 
-class PhotoCollectionViewCell: UICollectionViewCell {
+class PhotoCollectionViewCell: UITableViewCell {
     
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var spinner: UIActivityIndicatorView!
+    @IBOutlet var imageTitle: UILabel!
+    @IBOutlet var imageDate: UILabel!
+//    @IBOutlet var imageView: UIImageView!
     
-    func update(displaying image: UIImage?){
-        if let imageToDisplay = image{
-            spinner.stopAnimating()
-            imageView.image = imageToDisplay
-        } else{
-            spinner.startAnimating()
-            imageView.image = nil
-        }
-    }
+    func update(displaying image: Photo?){
+           if let imageToDisplay = image{
+//               spinner.stopAnimating()
+               imageTitle.text = imageToDisplay.title
+           } else{
+//               spinner.startAnimating()
+               imageTitle.text = "Not Found"
+           }
+       }
+
 }
