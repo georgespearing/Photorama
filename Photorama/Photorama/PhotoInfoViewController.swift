@@ -32,9 +32,9 @@ class PhotoInfoViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
         
-        nameField.text = photo.title
-        valueField.text = photo.photoID
-//
+//        nameField.text = photo.title
+//        valueField.text = photo.photoID
+////
 //        // get the item key
 //        let key = photo.photoID
 

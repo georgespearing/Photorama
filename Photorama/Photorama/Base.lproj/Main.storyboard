@@ -81,31 +81,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="yMZ-AA-JHX">
                                 <rect key="frame" x="0.0" y="52" width="414" height="632"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDz-FH-k0Y">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="liz-MY-u9U"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdO-RU-VPx">
-                                        <rect key="frame" x="0.0" y="53" width="414" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="KLT-ax-TAl"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-Mi-O2c">
-                                        <rect key="frame" x="0.0" y="106" width="414" height="526"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="632"/>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="HDz-FH-k0Y" firstAttribute="top" secondItem="yMZ-AA-JHX" secondAttribute="top" id="dA8-UU-zjt"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TNS-is-RUJ"/>
@@ -120,8 +99,6 @@
                     <navigationItem key="navigationItem" id="GB3-6V-tDW"/>
                     <connections>
                         <outlet property="imageView" destination="TVz-Mi-O2c" id="rbN-hT-d56"/>
-                        <outlet property="nameField" destination="HDz-FH-k0Y" id="cWo-qi-iU9"/>
-                        <outlet property="valueField" destination="tdO-RU-VPx" id="L6h-OQ-mit"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETy-L4-vDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
